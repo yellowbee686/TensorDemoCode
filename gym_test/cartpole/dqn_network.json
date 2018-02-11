@@ -1,0 +1,26 @@
+[
+    {
+        "type": "dense",
+        "size": 20,
+        "activation": {
+            "name": "leaky_relu",
+            "alpha": 0.1
+        },
+        "linear_weights": {
+            "name": "msra",
+            "slope": 0.25
+        }
+    },
+    {
+        "type": "dense",
+        "size": 20,
+        "activation": {
+            "name": "leaky_relu",
+            "alpha": 0.1
+        },
+        "linear_weights": {
+            "name": "msra",
+            "slope": 0.25
+        }
+    }
+]

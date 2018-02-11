@@ -1,0 +1,30 @@
+{
+  "type": "dqn_agent",
+  "explorations_spec": {
+    "type": "epsilon_decay",
+    "initial_epsilon": 1.0,
+    "final_epsilon": 0.1,
+    "timesteps": 1250000
+  },
+  "batch_size": 300,
+  "memory": {
+      "type": "prioritized_replay",
+      "capacity": 2000000
+  },
+  "update_frequency": 5,
+  "first_update": 1000,
+  "repeat_update": 1,
+  "discount": 1,
+  "optimizer": {
+    "type": "adam",
+    "learning_rate": 1e-2
+  },
+  "target_update_weight": 1.0,
+  "target_sync_frequency": 1000,
+  "double_q_model": true,
+  "summary_spec": {
+    "directory" : "../../TF/DQN/log",
+    "labels": ["inputs", "losses", "variables", "activations", "gradients", "regularization", "episode-reward"],
+    "steps": 200
+  }
+}
