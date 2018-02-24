@@ -6,7 +6,7 @@
         "name": "leaky_relu",
         "alpha": 0.1
     },
-    "linear_weights": {
+    "weights": {
         "name": "msra",
         "slope": 0.25
     }
@@ -18,7 +18,7 @@
         "name": "leaky_relu",
         "alpha": 0.1
     },
-    "linear_weights": {
+    "weights": {
         "name": "msra",
         "slope": 0.25
     }
