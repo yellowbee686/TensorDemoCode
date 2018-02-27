@@ -6,10 +6,10 @@ from tensorforce.execution import Runner
 from tensorforce.contrib.openai_gym import OpenAIGym
 
 # Create an OpenAIgym environment
-env = OpenAIGym('MountainCar-v0', visualize=False)
+env = OpenAIGym('MountainCarContinuous-v0', visualize=False)
 
-network_path = './mountain_car_ppo_network.json'
-agent_path = './mountain_car_ppo.json'
+network_path = './mountain_car_continuous_ppo_network.json'
+agent_path = './mountain_car_continuous_ppo.json'
 with open(network_path, 'r') as fp:
     network_spec = json.load(fp=fp)
 with open(agent_path, 'r') as fp:

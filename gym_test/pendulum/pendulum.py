@@ -35,7 +35,7 @@ def episode_finished(r):
 
 
 # Start learning
-runner.run(episodes=3000, max_episode_timesteps=200, episode_finished=episode_finished)
+runner.run(episodes=3000, max_episode_timesteps=env.gym.spec.max_episode_steps, episode_finished=episode_finished)
 runner.close()
 
 # Print statistics
