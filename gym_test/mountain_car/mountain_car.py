@@ -6,10 +6,10 @@ from tensorforce.execution import Runner
 from tensorforce.contrib.openai_gym import OpenAIGym
 
 # Create an OpenAIgym environment
-env = OpenAIGym('CartPole-v0', visualize=False)
+env = OpenAIGym('MountainCar-v0', visualize=True)
 
-network_path = 'ppo/ppo_network.json'
-agent_path = 'ppo/ppo.json'
+network_path = './mountain_car_ppo_network.json'
+agent_path = './mountain_car_ppo.json'
 with open(network_path, 'r') as fp:
     network_spec = json.load(fp=fp)
 with open(agent_path, 'r') as fp:
@@ -35,7 +35,7 @@ def episode_finished(r):
 
 
 # Start learning
-runner.run(episodes=3000, max_episode_timesteps=200, episode_finished=episode_finished)
+runner.run(episodes=5000, max_episode_timesteps=200, episode_finished=episode_finished)
 runner.close()
 
 # Print statistics
